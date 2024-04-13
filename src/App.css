@@ -1,38 +1,97 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Buttons {
+    font-size: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button {
+    width: 6vmax;
+    height: 10vmin;
+    font-size: 5vmin;
+    margin: 0.5vmin;
+}
+
+
+#input {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: 0.1vmin solid gray;
+    width: 24.4vmax;
+    height: 10vmin;
+    font-size: 4vmin;
+    padding: 1vmin;
+    margin: 0.5vmin;
+}
+
+#WaterMark {
+    text-align: center;
+    font-size: 1vmax;
+    color: rgb(255, 0, 0);
+    outline: none;
+    text-shadow:
+    0 0 20px crimson,
+    0 0 20px crimson,
+    0 0 10px crimson,
+    5px -10px 10px orange,
+    -5px -10px 10px yellow;
+    animation: 2s amazing infinite alternate linear;
+}
+
+@keyframes amazing {
+  0%   {
+    text-shadow: 0 40px 60px crimson, 0 0 30px red,
+    0 0 20px orange,
+    0 0 20px darkorange,
+    -5px -5px 5px yellow,
+    10px -10px 10px yellow;
+  }
+  25%   {
+    text-shadow: 0 10px 30px crimson, 0 0 20px red,
+    0 0 20px orange,
+    -5px -5px 5px yellow,
+    5px -10px 10px yellow,
+    -5px -10px 10px yellow;
+  }
+  50%   {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+    0 0 10px orange,
+    0 0 10px darkorange,
+    -5px -5px 5px yellow,
+    10px -10px 10px yellow;
+  }
+  75%   {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+    0 0 20px orange,
+    -5px -5px 5px yellow,
+    5px -10px 10px yellow,
+    -5px -10px 10px yellow;
+  }
+  100%   {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+    0 0 10px orange,
+    0 0 10px darkorange,
+    -5px -5px 5px yellow,
+    10px -10px 10px yellow;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
